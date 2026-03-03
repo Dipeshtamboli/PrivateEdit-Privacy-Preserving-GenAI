@@ -22,6 +22,8 @@ Current generative AI workflows require users to upload high-fidelity facial ima
 
 Our approach enforces **Privacy-by-Design** by separating the image into two streams: **Editable Context** (sent to the cloud) and **Identity Core** (kept on-device).
 
+![PrivateEdit Pipeline Overview](figs/main_fig.png)
+
 ### System Architecture & Privacy Analysis
 
 The **PrivateEdit** pipeline introduces a robust defense against the privacy risks inherent in cloud-based generative AI by decoupling a user's biometric identity from the editable image context. As illustrated in the figure above **(B)**, our system utilizes lightweight on-device masking to neutralize sensitive facial features before they reach any third-party "Privacy-Risk" (PR3P) AI model. This architecture prevents high-stakes threats such as biometric profiling and malicious identity reconstruction while maintaining the utility of professional-grade generative editing. Quantitative evaluations **(C)** across multiple foundation models show that our masking mechanism collapses the accuracy of sensitive attribute inference—such as eye color and presence of a mustache—to near-random levels, effectively putting data sovereignty back into the hands of the user.
