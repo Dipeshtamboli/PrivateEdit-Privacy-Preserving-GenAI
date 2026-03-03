@@ -4,7 +4,7 @@
 
 **PrivateEdit** is a modular, on-device pipeline designed to protect biometric privacy during generative image editing. It allows users to leverage powerful third-party cloud APIs (like Midjourney, DALL-E, or Gemini) for tasks such as professional headshot generation without ever uploading their actual facial identity.
 
-## 🛡️ The Core Problem: The "Biometric Disclosure" Tradeoff
+## The Core Problem: The "Biometric Disclosure" Tradeoff
 
 Current generative AI workflows require users to upload high-fidelity facial images to untrusted cloud servers. As shown in the **Baseline (A)** section of the figure below, this exposes users to:
 
@@ -18,7 +18,7 @@ Current generative AI workflows require users to upload high-fidelity facial ima
 
 
 
-## 🏗️ The PrivateEdit Pipeline
+## The PrivateEdit Pipeline
 
 Our approach enforces **Privacy-by-Design** by separating the image into two streams: **Editable Context** (sent to the cloud) and **Identity Core** (kept on-device).
 
@@ -68,7 +68,7 @@ Once the edited image is returned, the final composite is generated locally on t
 
 ---
 
-## 📊 Key Features
+## Key Features
 
 * **Zero-Trust Architecture:** The cloud provider never sees your actual biometric identity.
 
@@ -76,11 +76,11 @@ Once the edited image is returned, the final composite is generated locally on t
 * **Tunable Privacy:** Adjustable "Mask Ratio" allows users to balance between privacy and output fidelity.
 
 
-* **Inference Hardening:** Proven to reduce attribute inference (age, eye color, mustache) by over **50%** against state-of-the-art models like Gemini, Grok, and LLaMA.
+* **Attribute obfuscation:** Proven to reduce attribute inference (age, eye color, mustache) by over **50%** against state-of-the-art models like Gemini, Grok, and LLaMA.
 
 
 
-## 📜 Citation
+## Citation
 
 If you use this work in your research, please cite our paper:
 
