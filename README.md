@@ -27,6 +27,8 @@ _IEEE Transactions on Artificial Intelligence (TAI), 2026_
 
 *The PrivateEdit desktop app, end-to-end (clip is sped up): **open** a photo → **mask** the face on-device → have a **third party** turn the masked image into a professional headshot (the real face is never exposed) → **re-inject** the original identity locally. ▶ [Full video](assets/PrivateEdit-Demo.mp4).*
 
+> 🎚️ **The mask is user-controlled.** Increasing the mask size hides more of the face for **stronger privacy** — but the third-party model then has less context, so the generated result can **lose some fidelity**. Users dial this privacy‑vs‑quality tradeoff to their own comfort.
+
 ## 💡 TL;DR
 
 Modern generative-editing workflows (professional headshots, retouching, style transfer) require uploading a **high-fidelity image of your face** to untrusted third-party cloud APIs. **PrivateEdit** is a **modular, on-device pipeline** that lets you use those same black-box APIs **without ever transmitting your biometric identity**. It splits each image into an **Editable Context** (sent to the cloud) and an **Identity Core** (kept on-device), then re-integrates your identity locally after editing.
@@ -64,7 +66,7 @@ PrivateEdit enforces **privacy-by-design** (panel **(B)**): lightweight on-devic
 ## ✨ Key features
 
 - **Zero-trust architecture** — the cloud provider never sees your real biometric identity.
-- **Tunable privacy** — an adjustable **mask ratio** trades off privacy vs. output fidelity.
+- **Tunable, user-controlled privacy** — the user sets the **mask size**: a larger mask hides more of the face for stronger privacy, at the cost of some fidelity in the generated result.
 - **Model-agnostic** — works with any black-box editing API; no retraining or model access required.
 - **Attribute obfuscation** — reduces attribute inference (age, eye color, mustache, …) by **>50%** against SOTA models.
 
