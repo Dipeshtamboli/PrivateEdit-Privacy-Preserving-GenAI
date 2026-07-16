@@ -21,6 +21,12 @@ _IEEE Transactions on Artificial Intelligence (TAI), 2026_
 
 ---
 
+## 🎥 Demo
+
+![PrivateEdit desktop app demo](assets/PrivateEdit-Demo.gif)
+
+*The PrivateEdit desktop app, end-to-end (clip is sped up): **open** a photo → **mask** the face on-device → have a **third party** turn the masked image into a professional headshot (the real face is never exposed) → **re-inject** the original identity locally. ▶ [Full video](assets/PrivateEdit-Demo.mp4).*
+
 ## 💡 TL;DR
 
 Modern generative-editing workflows (professional headshots, retouching, style transfer) require uploading a **high-fidelity image of your face** to untrusted third-party cloud APIs. **PrivateEdit** is a **modular, on-device pipeline** that lets you use those same black-box APIs **without ever transmitting your biometric identity**. It splits each image into an **Editable Context** (sent to the cloud) and an **Identity Core** (kept on-device), then re-integrates your identity locally after editing.
